@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="upper-part">
+        <div class="menu"><img src="/menu.png" alt=""></div>
+        <div class="logo"><img src="/livescore-logo.png" alt=""></div>
+        <div class="search"><img src="/search.png" alt=""></div>
+    </div>
+    <div class="middle-upper">
+        <div class="league-sign">
+            <div class="leag-logo"><img src="/serie-A.png" alt=""></div>
+            <div class="names">
+                <div class="leag-name">Serie A</div>
+                <div class="country"><span>Italy</span></div>
+            </div>
+        </div>    
+            <div class="stickers">
+                <div class="pitch"><img src="/pitch.png" alt=""></div>
+                <div class="star"><img src="/favorite-star.png" alt=""></div>
+            </div>
+    </div>
+    <div class="lower-upper">
+        <div class="team1">
+            <div class="team-logo"><img src="/Empoli-logo.png" alt=""></div>
+            <div class="team-name">Empoli</div>
+        </div>
+        <div class="goals-and-time">
+            <div class="goals">
+                <div class="team1-goals">1</div>
+                <div class="separator">-</div>
+                <div class="team2-goals">1</div>
+            </div>
+            <div class="minutes">3'</div>
+        </div>
+        <div class="team2">
+            <div class="team2-logo"><img src="/bologna.png" alt=""></div>
+            <div class="team2-name">Bologna</div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="info">Info</div>
+        <div class="Summary">Summary</div>
+        <div class="Stats">Stats</div>
+        <div class="Line-ups">Line-Up</div>
+        <div class="Table">Table</div>
+        <div class="News">News</div>
+        <div class="H2h">H2h</div>
+    </div>
+    <div class="main-events">
+        <button class="tab events active" onclick="showContent('events-content')">Events</button>
+        <button class="tab commentary" onclick="showContent('commentary-content')">Commentary</button>
+        <div id="events-content" class="content">
+            <div class="actions-events">
+                <div class="event1">
+                    <div class="time">24'</div>
+                    <div class="player1-names">
+                        <div class="goal-scoler">L.colombe</div>
+                        <div class="assister">G.Pezzella</div>
+                    </div>
+                    <div class="action-sticker1">⚽</div>
+                    <div class="inter-joint">
+                        <div class="left-goal">1</div>
+                        <div class="separator">-</div>
+                        <div class="right-goal">0</div>
+                    </div>
+                    <div class="action-sticker2"></div>
+                    <div class="player2-names"></div>
+                </div>
+                <div class="event2">
+                    <div class="time">36'</div>
+                    <div class="player1-names">
+                        <div class="goal-scoler">L.handerson</div>
+                        <div class="assister"></div>
+                    </div>
+                    <div class="action-sticker1">🟨</div>
+                    <div class="inter-joint">
+                        <div class="left-goal"></div>
+                        <div class="separator"></div>
+                        <div class="right-goal"></div>
+                    </div>
+                    <div class="action-sticker2"></div>
+                    <div class="player2-names"></div>
+                </div>
+            </div>
+        </div>
+        <div id="commentary-content" class="content hidden"><div class="actions-events">
+            <div class="event1">
+                <div class="time">1'</div>
+                <div class="comment">Kick-off</div>
+            </div>
+            <div class="event2">
+                <div class="time">2'</div>
+                <div class="comment">Liam Henderson from Empoli goes a bit too far there as the pulls down Dan Ndoye</div>
+            </div>
+        </div>
+    </div>
+    </div>    
+    <div class="footer">
+        <div class="scores">
+            <div class="figure"><img src="/orange-ball.png" alt=""></div>
+            <div class="score">Scores</div>
+        </div>
+        <div class="favourites">
+            <div class="fav-star"><img src="/favorite-star.png" alt=""></div>
+            <div class="fav">Favourites</div>
+        </div>
+        <div class="news">
+            <div class="news-figure"><img src="/news-fig.png" alt=""></div>
+            <div class="news-title">News</div>
+        </div>
+    </div>
+    <script src="script.js">
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const eventsTab = document.querySelector(".events-tab");
+        const commentaryTab = document.querySelector(".commentary-tab");
+        const commentaryContent = document.getElementById("commentary-content");
+
+        eventsTab.addEventListener("click", () => {
+            eventsTab.classList.add("active");
+            commentaryTab.classList.remove("active");
+            commentaryContent.classList.add("hidden");
+        });
+
+        commentaryTab.addEventListener("click", () => {
+            commentaryTab.classList.add("active");
+            eventsTab.classList.remove("active");
+            commentaryContent.classList.remove("hidden");
+        });
+    });
+
+    </script>
+</body>
+</html>

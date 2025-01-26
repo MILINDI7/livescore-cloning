@@ -1,0 +1,337 @@
+body {
+    background-color: #0f0f0f;
+    width: 700px;
+}
+.upper-part {
+    display: flex;
+    height: 82px;
+    width: 720px;
+    background-color: #0f0f0f;
+    align-items: center; /* Vertically centers the child divs */
+    justify-content: space-between; /* Places first and third divs in the corners */
+}
+
+.menu, .logo, .search {
+    display: flex;
+    align-items: center;
+}
+
+.menu img, .logo img, .search img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.middle-upper {
+    display: flex;
+    background-color: #0f0f0f;
+    width: 720px;
+    height: 82px;
+    align-items: center; /* Vertically centers the child divs */
+    justify-content: space-between; /* Places league-sign on the left, stickers on the right */
+}
+
+.league-sign {
+    display: flex;
+    align-items: center;
+}
+
+.leag-logo {
+    margin-right: 10px; /* Space between logo and names */
+}
+
+.names {
+    display: flex;
+    flex-direction: column; /* Stack names vertically */
+    color: white;
+}
+
+.stickers {
+    display: flex;
+    align-items: center;
+}
+
+.stickers .pitch, .stickers .star {
+    margin-left: 10px; /* Space between the child divs of stickers */
+}
+
+.leag-logo img, .pitch img, .star img {
+    max-height: 100%;
+    max-width: 100%;
+}
+ span {
+    color: grey;
+ }
+
+ .lower-upper {
+    display: flex;
+    background-color: #181818;
+    width: 690px;
+    height: 145px;
+    border-radius: 30px;
+    justify-content: space-between; /* Positions team1, goals-and-time, and team2 */
+    align-items: center; /* Vertically centers the child divs */
+    margin: 0 auto; /* Centers the div horizontally */
+}
+
+.team1, .team2 {
+    display: flex;
+    flex-direction: column; /* Stacks the child divs one on top of another */
+    align-items: center;
+    color: white;
+    padding: 100px;
+}
+
+.goals-and-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.goals {
+    display: flex;
+    justify-content: center; /* Aligns the goal elements side by side */
+    margin-bottom: 10px; /* Space between goals and minutes */
+}
+
+.separator {
+    margin: 0 5px; /* Space around the separator */
+}
+
+.minutes {
+    font-size: 20px;
+    color: white;
+}
+
+.team-logo img, .team2-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.team1-name, .team2-name {
+    margin-top: 10px; /* Adds space between logo and team name */
+}
+
+.navigation {
+    display: flex;
+    width: 720px;
+    height: 60px;
+    background-color: #0f0f0f;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-top: 20px; /* Adds a margin to separate it from the upper div */
+    margin-left: 20px; /* Positions the main div on the left with a small gap */
+}
+
+.navigation div {
+    cursor: pointer;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation div:hover {
+    background-color: #282828;
+}
+
+.navigation .Summary {
+    color: orange;
+    font-weight: bold;
+}
+
+.main-events {
+    background-color: #0f0f0f;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    display: inline-block; /* Keeps the div tightly wrapped around the buttons */
+}
+
+.tab {
+    background-color: #0f0f0f;
+    border: 1px solid grey;
+    color: white;
+    /* border: none; */
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px; /* Adds spacing between buttons */
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #282828;
+    color: white;
+}
+
+.tab.active {
+    background-color: white;
+    color: #0f0f0f;
+}
+
+.content {
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+.content.hidden {
+    display: none;
+}
+
+.content:not(.hidden) {
+    display: block; /* Show when active */
+}
+
+#commentary-content {
+    display: flex;
+    flex-direction: column; /* Reverse the order of child divs */
+    background-color: #0f0f0f;
+    padding: 10px;
+    border: 1px solid grey; /* Outer boundary of the main div */
+    border-radius: 5px;
+}
+
+.actions-events {
+    display: flex;
+    flex-direction: column; /* Stack the child events vertically */
+     /* Single line separating rows */
+}
+
+.actions-events > div {
+    display: flex;
+    flex-direction: row; /* Time and comment side by side */
+    justify-content: space-between; /* Space between time and comment */
+    align-items: center; /* Align items vertically */
+    padding: 10px 0; /* Padding between content */
+    color: grey; /* Font color */
+}
+
+.actions-events > div + div {
+    border-bottom: 1px solid grey; /* Separator between rows */
+}
+
+.actions-events .time {
+    width: 10%; /* Allocate width for the time div */
+    text-align: left;
+}
+
+.actions-events .comment {
+    width: 90%; /* Allocate width for the comment div */
+    text-align: left;
+}
+
+.inter-joint {
+    display: flex;
+    flex-direction: row;
+}
+
+.goal-scoler {
+    color: white;
+}
+
+.assister {
+    font-size: 13px;
+}
+
+.actions-events {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.footer {
+    width: 720px;
+    height: 100px;
+    background-color: #0f0f0f; /* Background color for the footer */
+    display: flex;
+    flex-direction: row; /* Arrange child divs (scores, favourites, news) in rows */
+    justify-content: space-between; /* Add space between the rows */
+    align-items: center; /* Center align items horizontally */
+    padding: 10px; /* Add some padding inside the footer */
+    border-radius: 5px; /* Optional: Rounded corners for aesthetics */
+}
+
+.footer > div {
+    display: flex;
+    flex-direction: column; /* Stack the child elements (figure and title) vertically */
+    align-items: center; /* Center align the content horizontally */
+    color: grey; /* Default text color for the child divs */
+    font-size: 14px; /* Adjust font size */
+}
+
+.footer .scores .score {
+    color: orange; /* Set the "Scores" text color to orange */
+}
+
+.footer > div img {
+    max-width: 30px; /* Adjust size of images */
+    margin-bottom: 5px; /* Space between the image and text */
+}
+
+/* Existing styles */
+
+/* Responsive Design */
+@media (max-width: 720px) {
+    body {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .upper-part,
+    .middle-upper,
+    .lower-upper,
+    .navigation,
+    .footer {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: row; /* Stack the footer items vertically on smaller screens */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .footer > div {
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+}
+
+/* Content Styling */
+.content {
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none; /* Hide content by default */
+}
+
+.tab {
+    background-color: #0f0f0f;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #282828;
+}
+
+.tab.active {
+    background-color: white;
+    color: #0f0f0f;
+}
